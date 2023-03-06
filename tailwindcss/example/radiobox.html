@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+  </head>
+
+  <body class="m-4">
+    <form>
+      <!-- ラジオボタン -->
+      <div>性別</div>
+      <div class="flex gap-2 mb-4">
+        <div class="form-control items-center">
+          <label for="m" class="label cursor-pointer">
+            <input type="radio" name="test1" id="m" value="m" class="radio" checked>
+            <span class="label-text">男性</span>
+          </label>
+        </div>
+        <div class="form-control items-center">
+          <label for="f" class="label cursor-pointer">
+            <input type="radio" name="test1" id="f" value="f" class="radio">
+            <span class="label-text">女性</span>
+          </label>
+        </div>
+        <div class="form-control items-center">
+          <label for="e" class="label cursor-pointer">
+            <input type="radio" name="test1" id="e" value="e" class="radio">
+            <span class="label-text">その他</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- チェックボックス -->
+      <div>好きなスポーツ</div>
+      <div class="flex gap-2 mb-4">
+        <div class="form-control items-center">
+          <label for="baseball" class="label cursor-pointer">
+            <input type="checkbox" name="test2" id="baseball" value="baseball" class="checkbox">
+            <span class="label-text">野球</span>
+          </label>
+        </div>
+        <div class="form-control items-center">
+          <label for="football" class="label cursor-pointer">
+            <input type="checkbox" name="test2" id="football" value="football" class="checkbox">
+            <span class="label-text">サッカー</span>
+          </label>
+        </div>
+        <div class="form-control items-center">
+          <label for="basketball" class="label cursor-pointer">
+            <input type="checkbox" name="test2" id="basketball" value="basketball" class="checkbox">
+            <span class="label-text">バスケットボール</span>
+          </label>
+        </div>
+        <div class="form-control items-center">
+          <label for="golf" class="label cursor-pointer">
+            <input type="checkbox" name="test2" id="golf" value="golf" class="checkbox">
+            <span class="label-text">ゴルフ</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- セレクトボックス -->
+      <div>好きなフルーツ</div>
+      <div class="form-control w-1/2 mb-4">
+        <select name="test3" class="select select-bordered">
+          <option disabled selected>選択してください</option>
+          <option value="a">りんご</option>
+          <option value="b">バナナ</option>
+          <option value="g">ぶどう</option>
+          <option value="k">キウイ</option>
+          <option value="s">いちご</option>
+        </select>
+      </div>
+
+      <!-- テキストエリア -->
+      <div>ご意見</div>
+      <div class="form-control w-1/2 mb-4">
+        <textarea class="textarea textarea-bordered" placeholder="ご意見をご記入ください"></textarea>
+      </div>
+    </form>
+  </body>
+
+</html>
