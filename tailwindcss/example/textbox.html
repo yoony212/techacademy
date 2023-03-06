@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+  </head>
+
+  <body class="m-4">
+    <!-- フォームの基本 -->
+    <form>
+      <div class="form-control w-full my-4">
+        <label for="test1" class="label">
+          <span class="label-text">お名前</span>
+        </label>
+        <input type="text" name="test1" placeholder="お名前を入力してください" class="input input-bordered w-full">
+      </div>
+    </form>
+
+    <hr>
+
+    <!-- ラベルを横に並べる -->
+    <form>
+      <div class="form-control w-full my-4">
+        <label for="test2" class="label">
+          <span class="label-text w-1/6">姓</span>
+          <input type="text" name="test2" placeholder="姓を入力してください" class="input input-bordered w-5/6">
+        </label>
+      </div>
+
+      <div class="form-control w-full my-4">
+        <label for="test3" class="label">
+          <span class="label-text w-1/6">名</span>
+          <input type="text" name="test3" placeholder="名を入力してください" class="input input-bordered w-5/6">
+        </label>
+      </div>
+
+      <div class="form-control w-full my-4">
+        <div>
+          <button class="btn btn-primary">登録</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+
+    <!-- アクセサリをつける -->
+    <form>
+      <div class="form-control w-full my-4">
+        <label for="test4" class="label">
+          <span class="label-text">郵便番号</span>
+        </label>
+        <label class="input-group">
+          <span>〒</span>
+          <input type="text" name="test4" placeholder="000-0000" class="input input-bordered w-full">
+        </label>
+      </div>
+    </form>
+  </body>
+
+</html>

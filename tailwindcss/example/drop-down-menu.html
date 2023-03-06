@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="dropdown">
+        <button class="btn">操作 ▼</button>
+        <!-- 選択肢 -->
+        <ul class="dropdown-content menu p-2 bg-base-100 w-52">
+            <li><a href="#">返信</a></li>
+            <li><a href="#">転送</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="#">削除</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
