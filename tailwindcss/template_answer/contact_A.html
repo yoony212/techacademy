@@ -7,6 +7,11 @@
     <title>お問い合わせ | サンプル株式会社</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+    <style type="text/css">
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+      }
+    </style>
   </head>
 
   <body>
@@ -14,17 +19,17 @@
       <nav class="navbar bg-base-200">
         <div class="flex-1">
           <!-- ボタンの背景を透明にする指定を追加 -->
-          <a href="#" class="normal-case text-xl btn">サンプル株式会社</a>
+          <a href="#" class="normal-case text-xl btn btn-ghost">サンプル株式会社</a>
 
           <!-- メニューについて、以下の2つの指定を追加 -->
           <!-- (1)通常は表示しない -->
           <!-- (2)768px以上の画面幅のときにメニューを表示する -->
-          <ul class="menu menu-horizontal p-0">
+          <ul class="menu menu-horizontal p-0 hidden md:flex">
             <li><a href="#">会社情報</a></li>
             <li><a href="#">ニュース</a></li>
             <li><a href="#">採用情報</a></li>
             <!-- お問い合わせページを表示していることをわかりやすくする設定を追加 -->
-            <li><a href="#" class="">お問い合わせ</a></li>
+            <li><a href="#" class="active">お問い合わせ</a></li>
           </ul>
         </div>
         <div class="flex-none">
@@ -50,27 +55,29 @@
       <!-- 以下の2つの指定を追加 -->
       <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
       <!-- (2)768px以上の画面幅のとき、4個のカラムが並んだグリッドにする -->
-      <div class="mt-4">
+      <div class="mt-4 md:grid md:grid-cols-4">
         <div>
           <strong>
             <!-- (1)電話に関するHeroiconsのアイコンを追加 -->
             <!-- (2)このアイコンをインラインで表示するための指定を追加 -->
 
 
-
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+              <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+            </svg>
             お電話：
           </strong>
         </div>
 
         <!-- 768px以上の画面幅のとき、3つ分のカラム幅で表示する指定を追加 -->
-        <div class="">
+        <div class="md:col-span-3">
           <p>該当する内容の電話番号におかけください。</p>
 
           <div class="overflow-x-auto mb-4">
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)テーブルの装飾を適用する -->
             <!-- (2)テーブルの行ごとの背景色を交互に変える -->
-            <table class="mt-4 w-full">
+            <table class="mt-4 w-full table table-zebra">
               <thead>
                 <tr>
                   <th>#</th>
@@ -103,13 +110,13 @@
           </div>
 
           <!-- 黄色の枠のアラートを指定 -->
-          <div class="">
+          <div class="alert alert-warning">
             <div class="w-full">
               <!-- (1)時間に関するHeroiconsのアイコンを追加 -->
               <!-- (2)このアイコンをインラインで表示するための指定を追加 -->
-
-
-
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z" clip-rule="evenodd" />
+              </svg>
               営業時間：平日10時〜19時
             </div>
           </div>
@@ -119,21 +126,21 @@
       <!-- 以下の2つの指定を追加 -->
       <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
       <!-- (2)768px以上の画面幅のとき、4個のカラムが並んだグリッドにする -->
-      <div class="mt-4">
+      <div class="mt-4 md:grid md:grid-cols-4">
         <div>
           <strong>
             <!-- (1)メールに関するHeroiconsのアイコンを追加 -->
             <!-- (2)このアイコンをインラインで表示するための指定を追加 -->
-
-
-
-
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 inline">
+              <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
+              <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
+            </svg>
             メール：
           </strong>
         </div>
 
         <!-- 768px以上の画面幅のとき、3つ分のカラム幅で表示する指定を追加 -->
-        <div class="">
+        <div class="col-span-3">
           <p>
             プライバシーポリシーをご確認いただき、ご同意の上で、送信ボタンをクリックしてください。<br>
             お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。
@@ -142,12 +149,12 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <label for="company" class="label">
                 <span class="label-text">会社名：</span>
               </label>
               <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
-              <div class="">
+              <div class="md:col-span-5">
                 <input type="text" id="company" name="company" placeholder="会社名を入力してください" class="input input-bordered w-full">
               </div>
             </div>
@@ -155,12 +162,12 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <label for="name" class="label">
                 <span class="label-text">氏名：</span>
               </label>
               <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
-              <div class="">
+              <div class="md:col-span-5">
                 <input type="text" id="name" name="name" placeholder="氏名を入力してください" class="input input-bordered w-full">
               </div>
             </div>
@@ -168,12 +175,12 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <label for="mail" class="label">
                 <span class="label-text">メール：</span>
               </label>
               <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
-              <div class="">
+              <div class="md:col-span-5">
                 <input type="text" id="mail" name="mail" placeholder="メールアドレスを入力してください" class="input input-bordered w-full">
               </div>
             </div>
@@ -181,12 +188,12 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <label for="tel" class="label">
                 <span class="label-text">電話番号：</span>
               </label>
               <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
-              <div class="">
+              <div class="md:col-span-5">
                 <input type="text" id="tel" name="tel" placeholder="電話番号を入力してください" class="input input-bordered w-full">
               </div>
             </div>
@@ -194,12 +201,12 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <label for="content" class="label">
                 <span class="label-text">内容：</span>
               </label>
               <!-- 768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する指定を追加 -->
-              <div class="">
+              <div class="md:col-span-5">
                 <textarea class="textarea textarea-bordered w-full" id="content" name="content" placeholder="内容を入力してください"></textarea>
               </div>
             </div>
@@ -207,15 +214,17 @@
             <!-- 以下の2つの指定を追加 -->
             <!-- (1)768px以上の画面幅のとき、グリッドを使う -->
             <!-- (2)768px以上の画面幅のとき、6個のカラムが並んだグリッドにする -->
-            <div class="form-control w-full my-4">
+            <div class="form-control w-full my-4 md:grid md:grid-cols-6">
               <!-- 以下の2つの指定を追加 -->
               <!-- (1)768px以上の画面幅のとき、1つ目のカラムは空にする（2つ目のカラムから要素を並べる） -->
+              <div>
+              </div>
               <!-- (2)768px以上の画面幅のとき、フォーム部品は5つ分のカラム幅で表示する -->
-              <div class="">
+              <div class="md:col-span-5">
                 <!-- 以下の2つの指定を追加 -->
                 <!-- (1)ボタンの色を緑色にする -->
                 <!-- (2)ボタンの幅が指定のカラム幅に対して100％の長さになるようにする -->
-                <button type="submit" class="btn btn-outline">お問い合わせ内容を送信する</button>
+                <button type="submit" class="btn btn-outline btn-block btn-success">お問い合わせ内容を送信する</button>
               </div>
             </div>
           </form>
