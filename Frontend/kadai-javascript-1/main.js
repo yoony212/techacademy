@@ -15,4 +15,3 @@ const max = 100;
 for(i = 1; i <= max; i++) {
   console.log(FizzBuzz(i));
 }
-
